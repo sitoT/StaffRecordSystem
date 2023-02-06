@@ -1,0 +1,45 @@
+﻿@model StaffParam
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+        <div>
+
+            <h5 class="mt-5">Staff Details Form</h5>
+
+            <div class="border p-5 ">
+                <form method="post">
+                    <div class"p-5">
+                        <div class="mb-4">
+                            <label asp-for="FirstName"></label>
+                            <input asp-for="FirstName" class="form-control"/>
+                            <span asp-validation-for="FirstName"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label asp-for="LastName"></label>
+                            <input asp-for="LastName" class="form-control"/>
+                            <span asp-validation-for="LastName"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:150px">Add Staff</button>
+                        &nbsp;
+                        <a class="btn btn-secondary" asp-action="index" style="width:150px">Back to List</a>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+
