@@ -80,10 +80,10 @@ namespace Test1.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public IActionResult DeleteStaffRecord(int? id)
+        public IActionResult DeleteStaffRecord(int? obj)
 
         {
-            var StaffRecord = _db.StaffParams.Find(id);
+            var StaffRecord = _db.StaffParams.Find(obj);
             if(StaffRecord==null)
             {
                 return NotFound();
