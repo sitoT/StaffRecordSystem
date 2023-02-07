@@ -9,10 +9,10 @@ using Test1.EFDataConnection;
 
 #nullable disable
 
-namespace Test1.Migrations
+namespace StaffRecordSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230206044849_AddStaffRecordDb")]
+    [Migration("20230207125354_AddStaffRecordDb")]
     partial class AddStaffRecordDb
     {
         /// <inheritdoc />

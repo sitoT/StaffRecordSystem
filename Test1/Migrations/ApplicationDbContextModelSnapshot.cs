@@ -8,7 +8,7 @@ using Test1.EFDataConnection;
 
 #nullable disable
 
-namespace Test1.Migrations
+namespace StaffRecordSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot

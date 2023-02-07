@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Test1.Migrations
+namespace StaffRecordSystem.Migrations
 {
     /// <inheritdoc />
     public partial class AddStaffRecordDb : Migration
