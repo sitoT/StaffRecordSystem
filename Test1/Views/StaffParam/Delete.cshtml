@@ -10,9 +10,9 @@
             <h5 class="mt-5">Staff Details Form</h5>
 
             <div class="border p-5 ">
-                <form method="post">
+                <form method="post" asp-action="DeleteStaff">
+                    <input hidden asp-for="Id" />
                     <div class"p-5">
-                        <input type="hidden" asp-for="Id" />
                         <div class="mb-4">
                             <label asp-for="FirstName"></label>
                             <input asp-for="FirstName" class="form-control" disabled />
@@ -23,7 +23,7 @@
                             <input asp-for="LastName" class="form-control" disabled />
                             <span asp-validation-for="LastName"></span>
                         </div>
-                        <a asp-controller="StaffParam" asp-action="DeleteStaffRecord" class="btn btn-danger" style="width:150px">Delete</a>
+                        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
                         &nbsp;
                         <a class="btn btn-secondary" asp-action="index" style="width:150px">Back to List</a>
 

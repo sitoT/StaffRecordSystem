@@ -67,7 +67,7 @@ namespace Test1.Controllers
             }
             return View(obj);
         }
-         
+        
         //GET
         
         public IActionResult Delete(int? id)
@@ -77,22 +77,26 @@ namespace Test1.Controllers
             return View(StaffId);
         }
 
+        //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public IActionResult DeleteStaffRecord(int? obj)
-
+        public IActionResult DeleteStaff(int? id)
         {
-            var StaffRecord = _db.StaffParams.Find(obj);
-            if(StaffRecord==null)
+            var StaffId = _db.StaffParams.Find(id);
+
+            if (StaffId == null)
             {
                 return NotFound();
             }
 
-            _db.StaffParams.Remove(StaffRecord);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+                _db.StaffParams.Remove(StaffId);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            
         }
+         
+  
 
 
     }
